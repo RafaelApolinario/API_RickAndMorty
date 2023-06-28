@@ -13,16 +13,13 @@
 
 <body>
     <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <img src="./img/r-e-m-branca.webp" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        <div class="container-fluid d-flex justify-content-start align-items-center bg-body-tertiary">
+            <img src="./img/RICK_MORTY_ICON.png" alt="Logo" width="50" height="50" class="me-3">
+            <h1 id="titulo" class="flex-grow-1 text-center bg-body-tertiary">The Rick and Morty API</h1>
         </div>
     </nav>
-    <h1 id=titulo>The Rick and Morty API</h1>
-    <div style="color: white; margin: 30px; ">
+
+    <div style="color: white; margin: 5px; ">
         PAGINA
         <select name="pagina" id="pagina" onchange="apiRick(this.value)">
             <script>
@@ -33,35 +30,48 @@
             </script>
         </select>
     </div>
-    <div id="resultado">
-
+    <div class="container-fluid pt-5" id="imagem-fundo">
+        <div class="container">
+            <div id="resultado" class="row"></div>
+        </div>
     </div>
     <footer class="footer">
         <!-- Conteúdo do rodapé -->
     </footer>
-    <footer class="refooter">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <h1 class="navbar-brand">The Rick and Morty API</h1>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Personagens</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="api.html">Episódio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="loc.html">Localidade</a>
-                        </li>
-                    </ul>
-                </div>
+    </footer>
+    <footer class="container-fluid bg-dark text-light text-center fw-semibold pt-5" id="rodape">
+        <div class="row text-uppercase">
+            <div class="col-12 offset-lg-3 col-lg-2">
+                <p>
+                    Personagens:
+                    <span id="qtd-personagens">XX</span>
+                </p>
             </div>
-        </nav>
+            <div class="col-12 col-lg-2">
+                <p>
+                    Localizações:
+                    <span>XX</span>
+                </p>
+            </div>
+            <div class="col-12 col-lg-2">
+                <p>
+                    Episódios:
+                    <span>XX</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-5">
+            <div class="col-12">
+                <p class="text-copyright">
+                    <small>
+                        Desenvolvido por:
+                        <strong class="text-info">Rafael Apolinário</strong>
+                        em 2023.
+                    </small>
+                </p>
+            </div>
+        </div>
     </footer>
 
     <script src="./rick.js"></script>
